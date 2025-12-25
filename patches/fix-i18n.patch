@@ -1,0 +1,24 @@
+diff --git a/packages/frontend/@n8n/i18n/src/index.ts b/packages/frontend/@n8n/i18n/src/index.ts
+index df1db3e994..0f2a98ce9a 100644
+--- a/packages/frontend/@n8n/i18n/src/index.ts
++++ b/packages/frontend/@n8n/i18n/src/index.ts
+@@ -4,6 +4,7 @@ import { ref } from 'vue';
+ import { createI18n } from 'vue-i18n';
+ 
+ import englishBaseText from './locales/en.json';
++import chineseBaseText from './locales/zh.json';	
+ import type { BaseTextKey, LocaleMessages, INodeTranslationHeaders } from './types';
+ import {
+ 	deriveMiddleKey,
+@@ -16,9 +17,9 @@ export type * from './types';
+ 
+ export const i18nInstance = createI18n({
+ 	legacy: false,
+-	locale: 'en',
++	locale: 'zh',
+ 	fallbackLocale: 'en',
+-	messages: { en: englishBaseText },
++	messages: { en: englishBaseText, zh: chineseBaseText },
+ 	warnHtmlMessage: false,
+ });
+ 
