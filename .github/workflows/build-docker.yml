@@ -130,7 +130,7 @@ jobs:
 
       - name: 依赖安装和预编译
         run: |
-          pnpm install & node scripts/build-n8n.mjs
+          pnpm install zx path & node scripts/build-n8n.mjs
 
       - name: 构建并推送n8n镜像
         uses: docker/build-push-action@v5
