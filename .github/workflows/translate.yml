@@ -107,6 +107,7 @@ jobs:
         OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         OPENAI_API_CONCURRENT: ${{ vars.OPENAI_API_CONCURRENT }}
         REF_TAG: ${{ steps.latest-version.outputs.REF_TAG }}
+        GITHUB_TOKEN: ${{ secrets.GHCR_TOKEN }}
 
     - name: Translate Publish Git
       if: steps.check_tag.outputs.exists == 'false'
