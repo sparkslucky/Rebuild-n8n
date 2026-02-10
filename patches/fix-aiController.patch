@@ -1,0 +1,23 @@
+diff --git a/packages/cli/src/controllers/ai.controller.ts b/packages/cli/src/controllers/ai.controller.ts
+index 688774ef55..32d64e769c 100644
+--- a/packages/cli/src/controllers/ai.controller.ts
++++ b/packages/cli/src/controllers/ai.controller.ts
+@@ -239,7 +239,18 @@ export class AiController {
+ 		_: Response,
+ 	): Promise<AiAssistantSDK.BuilderInstanceCreditsResponse> {
+ 		try {
++			// If the instance is not configured to use the AiAssistant proxy, skip
++			// the remote call and return the fallback directly. This avoids triggering
++			// network calls when users configured direct provider usage.
++			if (!this.workflowBuilderService.isProxyConfigured()) {
++				return {
++					creditsQuota: -1,
++					creditsClaimed: 0,
++				};
++			}
++
+ 			return await this.workflowBuilderService.getBuilderInstanceCredits(req.user);
++
+ 		} catch (e) {
+ 			assert(e instanceof Error);
+ 			throw new InternalServerError(e.message, e);

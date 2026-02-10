@@ -1,0 +1,19 @@
+diff --git a/packages/cli/src/services/ai-workflow-builder.service.ts b/packages/cli/src/services/ai-workflow-builder.service.ts
+index 3a6023103b..6cd044d18c 100644
+--- a/packages/cli/src/services/ai-workflow-builder.service.ts
++++ b/packages/cli/src/services/ai-workflow-builder.service.ts
+@@ -52,6 +52,14 @@ export class WorkflowBuilderService {
+ 		this.loadNodesAndCredentials.addPostProcessor(async () => this.refreshNodeTypes());
+ 	}
+ 
++	// Returns true when the runtime is configured to use the AiAssistant proxy.
++	// The flag is driven by the `N8N_AI_USE_PROXY` environment variable.
++	// Only the literal string 'true' (case-sensitive) enables proxy usage.
++	// Empty or 'false' (or undefined) are treated as disabled.
++	isProxyConfigured(): boolean {
++		return process.env.N8N_AI_USE_PROXY === 'true';
++	}
++
+ 	/**
+ 	 * Update the node types on the existing service instance.
+ 	 * Called automatically when postProcessLoaders() runs (e.g., after community package changes).
