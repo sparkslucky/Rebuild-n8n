@@ -2333,7 +2333,6 @@
     "projectRoles.action.delete.title": "删除 '{roleName}'？",
     "projectRoles.action.delete.text": "您确定要永久删除 '{roleName}' 吗？此操作无法撤销。",
     "projectRoles.action.delete.warning": "删除角色是永久性的操作，无法撤销。",
-    "projectRoles.action.delete.useWarning": "此角色已分配给 {count} 位用户，无法删除。请先解除所有用户的分配。",
     "projectRoles.dangerZone": "危险区域",
     "projectRoles.action.duplicate": "重复",
     "projectRoles.action.duplicate.name": "{roleName}的副本",
