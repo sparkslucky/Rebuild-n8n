@@ -1713,6 +1713,7 @@
     "ndv.redacted.revealModal.logged": "此操作将被记录",
     "ndv.redacted.revealModal.legitimate": "如您有正当理由，请揭晓此数据。",
     "ndv.redacted.revealModal.policy": "不必要的访问可能违反贵组织的政策",
+    "ndv.redacted.revealModal.confirmButton": "显示数据",
     "ndv.redacted.revealError": "未能显示执行数据",
     "ndv.redacted.error.title": "该节点遇到错误",
     "ndv.redacted.error.description": "错误详细信息已被编辑，因为执行数据包含敏感信息。",
