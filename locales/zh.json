@@ -4203,7 +4203,6 @@
     "settings.n8nConnect.usage.empty": "未找到使用记录。",
     "settings.n8nConnect.usage.loadMore": "加载更多",
     "settings.n8nConnect.usage.refresh.tooltip": "刷新使用记录",
-    "settings.instanceAi.description": "配置实例AI助手、模型、记忆与权限设置。",
     "settings.n8nAgent.description": "为此实例启用或禁用 AI 助手并控制权限",
     "settings.n8nAgent.enable.label": "启用AI助手",
     "settings.n8nAgent.enable.description": "为实例中的所有用户启用该功能",
