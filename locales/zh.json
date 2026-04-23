@@ -5107,7 +5107,6 @@
     "instanceAi.workflowSetup.applied": "工作流已配置",
     "instanceAi.workflowSetup.deferred": "稍后配置",
     "instanceAi.workflowSetup.selectOption": "选择一个选项",
-    "instanceAi.workflowSetup.configureParameters": "配置 {count} 个参数",
     "instanceAi.workflowSetup.confirmTitle": "准备申请",
     "instanceAi.workflowSetup.reviewDetails": "审阅详情",
     "instanceAi.debug.copyTrace": "复制跟踪",
